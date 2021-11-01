@@ -7,6 +7,8 @@
   --preto: #000;
   --fontnunito: "Nunito";
   --fontvarela: "Varela Round";
+  --azulcinzado: #6e92a4;
+  --branco10: #ffffff0f;
 
 }
 *{
@@ -18,12 +20,18 @@
 html{
   height: 100%;
 }
+header, .titulo, #quemsomos, #produtos, .colprodut, #contato{
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+  color: var(--branco);
+}
 header{
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   position: fixed;
   top: 0;
-  overflow: hidden;
   color: var(--branco);
   font-family: var(--fontnunito);
   padding: 20px 10px;
@@ -52,7 +60,6 @@ header nav ul li{
   display: inline-block;
 }
 header nav ul li a{
-  overflow: hidden;
   position: relative;
   background-color: var(--cinzaclaro);
   color: var(--branco);
@@ -116,16 +123,15 @@ header nav ul li a:hover::after, header nav ul li a:active::after{
   color: var(--branco);
 }
 #quemsomos{
-  overflow: hidden;
   position: relative;
-  height: 500px;
+  height: 600px;
   background:;
   font: 15px var(--fontnunito);
   color: var(--branco);
-  background: var(--preto) url(../img/city.jpg) bottom/cover fixed;
+  background: var(--preto) url(../img/3-quadros-sao-paulo-preto-branco-cidade-copan.jpg) bottom/cover fixed ;
 }
 #quemsomos h2{
-  margin: 20px 20px 10px 20px;
+  margin: 75px 20px 10px 20px;
   z-index: 2;
   padding: 30px 0 30px 0;
   background-color: var(--cinzaclaro);
@@ -139,20 +145,149 @@ header nav ul li a:hover::after, header nav ul li a:active::after{
 }
 #quemsomos div{
   z-index: 1;
-  background: linear-gradient(180deg, var(--preto) 85%,  transparent);
+  background: linear-gradient(180deg, var(--preto) 70%,  transparent);
   position: absolute;
   top:0;
   left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
-  overflow: hidden;
 }
 #quemsomos div p::first-letter {
+  display: flex;
   color: var(--cinzaclaro);
   padding: 0 5px 0 20px;
   font-size: 30px;
   font-weight: bolder;
+}
+#produtos div{
+  align-items: center;
+  display: flex;
+  padding: 100px 0;
+  width: 80%;
+  margin: auto;
+  flex-flow: row wrap;
+}
+#produtos div section{
+  padding: 0 20px;
+  text-align: center;
+  font-family: var(--fontnunito);
+  border-left: 10px solid var(--azulcinzado);
+}
+#produtos div img, #produtos div section{
+  flex: 50%;
+  max-width: 50%;
+}
+#produtos div section h2{
+  padding: 0 0 20px 0;
+}
+.colprodut{
+  background-color: var(--preto);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.itemcolprodut{
+  text-align: center;
+  color: var(--branco);
+  width: 50%;
+  flex: 50%;
+  padding: 15px;
+  margin: 0;
+  font-family: var(--fontnunito);
+}
+.itemcolprodut img{
+  width: 100%;
+}
+footer{
+  color: var(--branco);
+  font-family: var(--fontnunito);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: linear-gradient(0deg,var(--preto)22%, var(--cinzatransparente)),url(../img/city.jpg) center/cover no-repeat fixed;
+  padding: 100px 0 0 0px;
+}
+footer i{
+  padding: 50px 0;
+  font-size: 50px;
+}
+footer form{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0;
+}
+footer form h2{
+  padding: 0 0 30px 0;
+}
+footer form input{
+  font-size: 20px;
+  background-color: var(--brancotransparente);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  transition: .5s ease;
+}
+footer form input[type="email"]{
+  margin-bottom: 10px;
+  width: 500px;
+}
+footer form input[type="button"]{
+  margin-bottom: 10px;
+  width: 150px;
+}
+footer form input:hover, footer form input:active{
+  background-color: var(--branco);
+
+}
+footer form input[type="button"]:active{
+background-color: v);
+}
+.itemfooter{
+  padding: 50px 10px;
+  background-color: var(--branco10);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.itemfooter iframe{
+  width: 50%;
+  height: 400px;
+}
+.contato{
+  display: flex;
+  flex-flow: row wrap;
+  width: 50%;
+  justify-content: center;
+}
+.contato div{
+  cursor: pointer;
+  border-left: 5px solid var(--azulcinzado);
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  flex: 50%;
+  max-width: calc(50% - 20px);
+  background-color: var(--cinzatransparente);
+  transition: .5s ease;
+}
+.contato div:hover{
+  background-color: var(--cinzaclaro);
+  border-left: 5px solid var(--branco);
+}
+.contato div:hover i{
+  color: var(--azulcinzado);
+}
+
+.contato div i, .contato div p{
+  transition: .5s ease;
+  padding: 10px 0
 }
 @keyframes animalogo {
   0%{width:0;}
@@ -196,13 +331,43 @@ header nav ul li a:hover::after, header nav ul li a:active::after{
     height: 900px;
   }
   #quemsomos div{
-    padding: 100px 10px; 
+    padding: 50px 10px; 
   }
   #quemsomos h2{
     padding: 30px;
   }
   #quemsomos p{
+    text-align: justify;
     padding: 10px;
     column-count: 1;
   }
+  #produtos div img, #produtos div section{
+    flex: 100%;
+    max-width: 100%;
+    padding: 50px 0;
+    border: none;
+  }
+  .colprodut{
+    padding: 60px 0;
+    background-color: var(--preto);
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .itemcolprodut{
+    flex: 100%;
+    width: 100%;
+  }
+  .itemcolprodut:nth-of-type(3){
+    order: 4
+  }
+  .itemcolprodut:nth-of-type(4){
+    order: 3
+  }
+  footer form{
+    padding: 0 20px;
+  }
+  footer form input[type="email"], footer form input[type="button"]{
+    width: 100%;
+  }
+
 }
