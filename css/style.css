@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Varela+Round&display=swap');
+:root{
+  --cinzatransparente: rgba(88, 88, 88, 0.63);
+  --cinzaclaro: #626262;
+  --branco: #fff;
+  --brancotransparente: rgba(255, 255, 255, 0.548);
+  --preto: #000;
+  --fontnunito: "Nunito";
+  --fontvarela: "Varela Round";
+
+}
+*{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+  height: 100%;
+}
+header{
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  color: var(--branco);
+  font-family: var(--fontnunito);
+  padding: 20px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cinzatransparente);
+}
+header h2{
+  position: relative;
+}
+header h2::before{
+  display: inline-block;
+  border-bottom: 5px dotted var(--cinzaclaro);
+  bottom: -5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  animation: animalogo 4s ease forwards ;
+}
+header nav ul{
+  list-style-type: none;
+}
+header nav ul li{
+  display: inline-block;
+}
+header nav ul li a{
+  overflow: hidden;
+  position: relative;
+  background-color: var(--cinzaclaro);
+  color: var(--branco);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+header nav ul li a:hover::after, header nav ul li a:active::after{
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  border-bottom: 2px solid var(--branco);
+  position: absolute;
+  content: "";
+  width: 0%;
+  border-radius: 5px;
+  background-color: var(--cinzatransparente);
+  animation: animadiv 0.8s ease forwards ;
+}
+.titulo{
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 600px;
+  background: url(../img/camera-fotografica-historia-origem-evolucao-e-como-funciona.jpg) center/cover no-repeat scroll;
+  filter: grayscale(0%);
+}
+.titulo::after{
+  content: "";
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(0deg, var(--preto) 30%,  transparent 70%);
+}
+.titulo h2{
+  position: relative;
+  padding: 0 18px;
+  font: bolder 80px var(--fontvarela);
+  background: var(--cinzaclaro) url(../img/monophy.gif) 100%/cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--cinzatransparente);
+}
+.titulo h2::after{
+  left: 0;
+  top:0;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--brancotransparente);
+}
+.titulo p{
+  padding: 0 10px;
+  font: 500 40px var(--fontnunito) ;
+  color: var(--branco);
+}
+#quemsomos{
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  background:;
+  font: 15px var(--fontnunito);
+  color: var(--branco);
+  background: var(--preto) url(../img/city.jpg) bottom/cover fixed;
+}
+#quemsomos h2{
+  margin: 20px 20px 10px 20px;
+  z-index: 2;
+  padding: 30px 0 30px 0;
+  background-color: var(--cinzaclaro);
+}
+#quemsomos p{
+  padding: 20px 40px;
+  text-align: left;
+  columns: 0 3;
+  column-gap: 50px;
+  column-rule: 2px solid var(--branco);
+}
+#quemsomos div{
+  z-index: 1;
+  background: linear-gradient(180deg, var(--preto) 85%,  transparent);
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+#quemsomos div p::first-letter {
+  color: var(--cinzaclaro);
+  padding: 0 5px 0 20px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+@keyframes animalogo {
+  0%{width:0;}
+  100%{width: 182px;}
+}
+@keyframes animadiv {
+  0%{width: 0;}
+  100%{width: 100%;}
+}
+@media screen and (max-width:600px) {
+ header{
+   align-items: flex-start;
+   flex-flow: column wrap;
+ }
+ header h2{
+   margin-bottom: 30px;
+ } 
+ .titulo{
+  justify-content: flex-end;
+ }
+ .titulo h2{
+   -webkit-text-fill-color: var(--branco);
+   z-index: 2;
+   background: transparent;
+   align-self:flex-end;
+ }
+ .titulo p{
+   color: var(--brancotransparente);
+   font-size: 30px;
+   padding: 10px;
+   z-index: 1;
+ }
+ .titulo::after{
+   height: 100%;
+  background: linear-gradient(0deg, var(--preto) 10%, var(--brancotransparente) 100%); 
+ }
+  .titulo h2::after{
+    display: none;
+  }
+  #quemsomos{
+    height: 900px;
+  }
+  #quemsomos div{
+    padding: 100px 10px; 
+  }
+  #quemsomos h2{
+    padding: 30px;
+  }
+  #quemsomos p{
+    padding: 10px;
+    column-count: 1;
+  }
+}
