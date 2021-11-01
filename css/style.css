@@ -369,5 +369,17 @@ background-color: v);
   footer form input[type="email"], footer form input[type="button"]{
     width: 100%;
   }
-
+  footer, .itemfooter, .contato{
+    flex-flow: column wrap;
+  }
+  .itemfooter iframe, .contato{
+    margin: 5px 0;
+    width: 100%;
+  }
+  .contato div{
+    margin: 5px 0;
+    flex: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
 }
