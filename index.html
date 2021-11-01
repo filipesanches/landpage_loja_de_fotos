@@ -14,12 +14,16 @@
   -->
   <header>
     <h2><a href="#home">Photo in Cube <i class="fas fa-camera-retro"></i></a></h2>
+    
     <nav>
-      <ul>
+      <div>
+        <div onclick="menu()"><i id="mudaico" class="fas fa-bars"></i></div>
+      <ul id="menu">
         <li><a href="#quemsomos">Quem Somos</a></li>
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+      </div>
     </nav>
   </header>
   <!--
@@ -77,36 +81,50 @@
     Contato
   -->
   <footer id="contato">
-      
-        <form action="#">
-          <i class="fas fa-paper-plane"></i>
-          <h2>Inscreva-se para receber atualizações!</h2>
-          <div>
-            <input type="email" name="email" id="email" placeholder="Digite seu e-mail para receber atualizações">
-            <input type="button" value="Enviar">
-          </div>
-        </form>
-      <div class="itemfooter">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2938.033355707567!2d-46.652983985585514!3d-23.566079067650325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e1!3m2!1spt-BR!2sbr!4v1635778757620!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <div class="contato">
-          <div><i class="fas fa-map-marked-alt"></i>
-            <h2>Endereço</h2>
-            <p>Av. Paulista, 268, São Paulo - SP</p>
-          </div>
-          <div><i class="fas fa-mobile-alt"></i></i>
-            <h2>Telefone:</h2>
-            <p>+55 (11) 99045-0000</p>
-          </div>
-          <div><i class="fas fa-envelope"></i>
-            <h2>E-mail:</h2>
-            <p>endereço@email.com.br</p>
-          </div>
-          <div><i class="fab fa-whatsapp"></i>
-            <h2>Whatsapp:</h2>
-            <p>+55 (11) 3248-8723</p>
-          </div>
-        </div>
+    <form action="#">
+      <i class="fas fa-paper-plane"></i>
+      <h2>Inscreva-se para receber atualizações!</h2>
+      <div>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail para receber atualizações">
+        <input type="button" value="Enviar">
+      </div>
+    </form>
+    <div class="itemfooter">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2938.033355707567!2d-46.652983985585514!3d-23.566079067650325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e1!3m2!1spt-BR!2sbr!4v1635778757620!5m2!1spt-BR!2sbr" style="border:0;"  allowfullscreen="" loading="lazy"></iframe>
+    <div class="contato">
+      <div><i class="fas fa-map-marked-alt"></i>
+        <h2>Endereço</h2>
+        <p>Av. Paulista, 268, São Paulo - SP</p>
+      </div>
+      <div><i class="fas fa-mobile-alt"></i></i>
+        <h2>Telefone:</h2>
+        <p>+55 (11) 99045-0000</p>
+      </div>
+      <div><i class="fas fa-envelope"></i>
+        <h2>E-mail:</h2>
+        <p>endereço@email.com.br</p>
+      </div>
+      <div><i class="fab fa-whatsapp"></i>
+        <h2>Whatsapp:</h2>
+        <p>+55 (11) 3248-8723</p>
+      </div>
+    </div>
+    </div>
+    <div class="icons">
+      <a href="https://github.com/filipesanches">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://github.com/filipesanches">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+      <a href="https://github.com/filipesanches">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/filipe-sanches-pereira-2baa23201/">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
   </footer>
+  <script src="js/js.js"></script>
 </body>
 </html>
