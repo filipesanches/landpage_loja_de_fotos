@@ -68,8 +68,6 @@ header nav ul li{
 header nav ul li a{
   position: relative;
   background-color: var(--cinzaclaro);
-  color: var(--branco);
-  text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
 }
