@@ -83,7 +83,7 @@ header nav ul li a:hover::after, header nav ul li a:active::after{
   width: 0%;
   border-radius: 5px;
   background-color: var(--cinzatransparente);
-  animation: animadiv 0.8s ease forwards ;
+  animation: animabotao 0.8s ease forwards ;
 }
 .titulo{
   position: relative;
@@ -309,7 +309,7 @@ background-color: var(--azulcinzado);
   0%{width:0;}
   100%{width: 182px;}
 }
-@keyframes animadiv {
+@keyframes animabotao {
   0%{width: 0;}
   100%{width: 100%;}
 }
@@ -334,19 +334,23 @@ background-color: var(--azulcinzado);
    background-color: var(--brancotransparente);
    padding: 10px;
    display: none;
-   width: 200px;
+   opacity: 0;
    top:60px;
    right: 10px;
    position: fixed;
+   animation: animamenu .5s ease  forwards;
  }
  #mudaico{
-  transition: .5s ease;
+   text-align: center;
+   width: 25px; 
  }
  header nav div #menu li,
  header nav div #menu li a{
+   opacity: 0;
    margin-top: 5px;
    display: block;
    width: 100%;
+   animation: animamenu .3s ease .1s  forwards;
  }
  .titulo{
   justify-content: flex-end;
@@ -429,5 +433,9 @@ background-color: var(--azulcinzado);
     flex: 100%;
     max-width: 100%;
     width: 100%;
+  }
+  @keyframes animamenu {
+    0%{transform:translate(100%, 0%);  opacity: 0;}
+    100%{transform:translate(0%, 0%);  opacity: 1;}
   }
 }
