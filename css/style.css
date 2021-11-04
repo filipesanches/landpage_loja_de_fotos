@@ -342,7 +342,10 @@ background-color: var(--azulcinzado);
  }
  #mudaico{
    text-align: center;
-   width: 25px; 
+   width: 25px;
+ }
+ header nav div:active{
+   background-color: var(--branco10);
  }
  header nav div #menu li,
  header nav div #menu li a{
