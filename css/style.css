@@ -347,10 +347,6 @@ background-color: var(--azulcinzado);
   position: absolute;
   top: 0px;
   right: 5px;
-  transition: .5s ease;
-}
-#btn-whats div .fa-times-circle:hover{
-  transform: rotate(180deg);
 }
 @keyframes animalogo {
   0%{width:0;}
