@@ -335,9 +335,9 @@ background-color: var(--azulcinzado);
   width: 70px;
   height: 70px;
   transition: .2s ease;
+  box-shadow: 0px 0px 5px 2px var(--preto);
 }
 #btn-whats div .fa-whatsapp:hover{
-  box-shadow: 0px 0px 5px 2px var(--preto);
   filter: grayscale(50%);
 }
 #btn-whats div .fa-times-circle{
