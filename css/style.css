@@ -331,6 +331,7 @@ background-color: var(--azulcinzado);
   font-size: 40px;
   border-radius: 50%;
   background-color: var(--verde);
+  opacity: 0.7;
   width: 70px;
   height: 70px;
   transition: .2s ease;
