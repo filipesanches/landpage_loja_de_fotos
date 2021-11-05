@@ -1,5 +1,5 @@
 # Landpage loja de fotos. 📷
 
- Aqui estão algumas de minhas abilidades com html, css e javascript.
-Este projeto é uma landing page sobre uma loja de fotos e contato.
-
+- Este projeto é uma landing page sobre uma loja de fotos.
+---
+ >Aqui estão algumas de minhas habilidades com `html`, `css` e `javascript`.

@@ -10,3 +10,6 @@ function menu() {
   document.getElementById("mudaico").classList.add("fa-bars");
 }
 }
+function fechabtn() {
+  document.getElementById("btn-whats").style.display = "none";
+}

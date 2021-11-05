@@ -9,6 +9,7 @@
   --fontvarela: "Varela Round";
   --azulcinzado: #6e92a4;
   --branco10: #ffffff0f;
+  --verde: green;
 }
 *{
   scroll-behavior: smooth;
@@ -304,6 +305,52 @@ background-color: var(--azulcinzado);
 }
 .icons a:hover{
   color: var(--azulcinzado);
+}
+#btn-whats{
+  z-index: 50;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  width: 70px;
+  height: 65px;
+}
+#btn-whats div{
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#btn-whats div .fa-whatsapp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--branco);
+  color: var(--branco);
+  right: 10px;
+  position: absolute;
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: var(--verde);
+  width: 70px;
+  height: 70px;
+  transition: .2s ease;
+}
+#btn-whats div .fa-whatsapp:hover{
+  box-shadow: 0px 0px 5px 2px var(--preto);
+  filter: grayscale(50%);
+}
+#btn-whats div .fa-times-circle{
+  padding: 2px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: var(--branco);
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  transition: .5s ease;
+}
+#btn-whats div .fa-times-circle:hover{
+  transform: rotate(180deg);
 }
 @keyframes animalogo {
   0%{width:0;}
