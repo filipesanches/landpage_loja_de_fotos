@@ -2,6 +2,7 @@
 :root{
   --cinzatransparente: rgba(88, 88, 88, 0.63);
   --cinzaclaro: #626262;
+  --cinzaclaro1: #888888;
   --branco: #fff;
   --brancotransparente: rgba(255, 255, 255, 0.548);
   --preto: #000;
@@ -31,15 +32,16 @@ header{
   z-index: 100;
   width: 100%;
   position: fixed;
+  padding: 40px 20px;
   top: 0;
   color: var(--branco);
   font-family: var(--fontnunito);
-  padding: 20px 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--cinzatransparente);
+  background-color: var(--cinzaclaro1);
+  transition: .5s ease;
 }
 header h2{
   position: relative;
@@ -357,7 +359,7 @@ background-color: var(--azulcinzado);
   0%{width: 0;}
   100%{width: 100%;}
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:720px) {
  header{
    align-items: flex-start;
    flex-flow: row nowrap;
@@ -377,9 +379,8 @@ background-color: var(--azulcinzado);
    border-radius: 5px;
    background-color: var(--brancotransparente);
    padding: 10px;
-   display: none;
    opacity: 0;
-   top:60px;
+   top:80px;
    right: 10px;
    position: fixed;
    animation: animamenu .5s ease  forwards;
