@@ -20,12 +20,11 @@ function tamanho(){
   || document.documentElement.clientWidth
   || document.body.clientWidth;
   if(largura <= 720){
-    menu.style.display = 'none' 
+    menu.style.display = 'none'
   } else{
     menu.style.display = 'block' 
   }
 }
-
 //Topo Scroll
 function topoScroll() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
