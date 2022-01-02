@@ -2,7 +2,7 @@
 let divMenu = document.getElementsByTagName('div')[1] //menuAbreFecha
 let menu = document.querySelector('ul#menu') //menuConteudo
 let mudaico = document.getElementById('mudaico') //IconeMenu
-divMenu.addEventListener('click', function(){ 
+divMenu.addEventListener('click', function(){
   if (menu.style.display == 'none') {
     mudaico.classList.remove('fa-bars')
     mudaico.classList.add('fa-times')
@@ -23,12 +23,10 @@ function tamanho(){
     menu.style.display = 'none' 
   } else{
     menu.style.display = 'block' 
-  }}
-  window.onload = tamanho()
-  window.addEventListener('resize', tamanho)
+  }
+}
 
 //Topo Scroll
-window.onscroll = function() {topoScroll()}
 function topoScroll() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.querySelector('header').style.padding = '20px'
@@ -40,8 +38,13 @@ function topoScroll() {
 }
 
 //Fecha Whats
-let closeWhats = document.querySelector('i.fas.fa-times-circle') //IconeFecharWhats
+let closeWhats = document.querySelector('i.fas.fa-times-circle') //
 let whats = document.getElementById('btn-whats')
 closeWhats.addEventListener('click', function(){
     whats.style.display = 'none'
 })
+
+
+window.onload = function() {tamanho()}
+window.addEventListener('resize', tamanho)
+window.onscroll = function() {topoScroll()}
