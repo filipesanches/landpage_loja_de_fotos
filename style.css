@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+#notes *{
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+#notes {
+  border-radius: 5px;
+  max-width: 900px;
+  width: 500px;
+  max-height: 900px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #f1f3f4;
+  border: 1px solid #d1d3d5;
+  overflow: hidden;
+}
+#notes > section > [id^="content"] > p >label {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #dadce0;
+  padding: 10px 10px 10px 12px;
+  background-color: #fafafa;
+  font-size: 16px;
+}
+#notes > section{
+  padding: 80px 10px 10px 10px;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+}
+#notes > section > [id^="content"]{
+  border-radius: 10px;
+  padding: 10px;
+  height:max-content;
+  background: #fff;
+  border: 1px solid #d1d3d5;
+}
+#notesmove {
+  padding: 5px;
+  cursor: move;
+  z-index: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2b72e8;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center
+}
+#notesmove > span{
+  text-align: left;
+  width: 100%;
+}
+#notesmove > span:nth-child(2){
+  text-align: right !important;
+  width: 100%;
+}
+#notesmove > i{
+  font-size: 15pt;
+  cursor: pointer;
+  margin: 5px;
+  transition: color .3s;
+}
+#notesmove > i:hover{
+  color: rgb(186, 186, 186);
+}
+
+#notes > section > [id^="content"] > p{
+  font-family: Roboto,Helvetica,Arial;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  padding: 0 0 10px 0;
+}
+#notes > section > [id^="content"] > p > select{
+  background-color: #fff;
+}
+#notes > section > [id^="content"] > p > input, select, textarea{
+  padding: 5px;
+  margin: 0 auto;
+  width: calc(100% - 20px);
+}
+#notes input, select, textarea{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #dadce0 !important;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+#notes input:focus, select:focus, textarea:focus {
+  border-bottom-color: #1a73e8 !important;
+  background-image: linear-gradient(to right, #1a73e8, #dadce0, #1a73e8);
+  background-position: bottom;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+}
+
+#notes > section > [id^="content"] > p:nth-child(10),
+#notes > section > [id^="content"] > p:nth-child(14){
+  margin-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+#tags-implement,
+#bads{
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #dadce0;
+  border-top: none;
+  margin-top: -8px;
+  padding: 10px;
+}
+#tags-implement > p,
+#bads > p{
+  margin: 0 0 5px 0;
+}
+#tags-implement > p > :hover,
+#bads > p> :hover{
+  cursor: pointer;
+  background-color: #c6c6c6;
+}
+#buttons{
+  justify-content: flex-end !important;
+  flex-direction: row !important;
+  align-items: flex-end !important;
+  border: none !important;
+}
+#buttons > button{
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+#buttons > hotkey{
+  width: 100%;
+}
+#buttons > #reset-note{
+  background-color: #c71b1b;
+}
+#buttons > #reset-note:hover{
+  background-color: #cf7979;
+}
+#buttons > #gerar-note,
+#buttons > #gerar-note-lt
+{
+  background-color: #1a73e8;
+}
+#buttons > #gerar-note:hover,
+#buttons > #gerar-note-lt:hover{
+  background-color: #6ba1e8;
+}
+
+#buttons > #reload-note{
+  background-color: #75c2ff;
+}
+#buttons > #reload-note:hover{
+  background-color: #7394ad;
+}
+
+[class*='copy']{
+  cursor: pointer;
+}
+[class*='copy']:hover{
+  color: #5b5b5b;
+}
+
+.invert{
+  filter: invert(1) !important;
+}
+.invert > #notesmove{
+  filter: invert(1) !important;
+}
+.invert  #gerar-note{
+  filter: invert(1) !important;
+}
+.invert  #reload-note{
+  filter: invert(1) !important;
+}
+.invert  #reset-note{
+  filter: invert(1) !important;
+}
+#notes > p > input, textarea, select{
+  padding: 10px !important;
+}
+
+#other, #bval-other{
+  padding: 5px;
+}
+#tema{
+  position: absolute;
+  left: 110px;
+}
+
+
+
+
+
+
+
+#notes > #abas{
+  display: flex;
+  position: relative;
+  top: 40px;
+  background: #2b71e8;
+}
+
+#notes > #abas > button{
+  cursor: pointer;
+  background-color: #1254aa;
+  border-radius: 5px 5px 0 0;
+  color: #d1d3d5;
+  padding: 5px 10px;
+}
+#notes > #abas > button:hover{
+  background-color: #3574c6;
+}
+#notes > section > #content-2 > button{
+  cursor: pointer;
+  background-color: #3574c6;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px 10px;
+  margin: 5px;
+}
+#notes > section > #content-2 > button:hover{
+  background-color: #3e5a7f;
+}
+#notes > section > #content-2 > button > .fa-envelope{
+  padding: 0 5px;
+}
+
+#notes > section > #content-3 #refreshCalendar,
+#horarios-disponiveis > p{
+  cursor: pointer;
+}
